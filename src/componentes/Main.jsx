@@ -2,18 +2,20 @@ import BotaoMatricule from "./BotaoMatricule"
 import GridCursos from "./GridCursos"
 import poster from "../../img/videos-thumbnail-video1.png"
 import { BsMusicNote } from "react-icons/bs";
+import background from "../../img/home-background-mobile.png"
+import video from "../../video/video-promocional.mp4"
 
 function Main() {
     return (
         <main className="text-white text-center xl:w-7xl xl:mx-auto">
-            <div className="bg-[url(../../img/home-background-mobile.png)] pt-8">
+            <div className="pt-8" style={{backgroundImage: `url(${background})`}}>
                 <h3 className="text-2xl md:text-left md:pl-4"><span className="text-red-400">Curos online de</span> música</h3>
                 <p className="p-4 md:text-left md:py-0">Comece agora e aprenda a sua primeira música em 10 minutos</p>
                 <BotaoMatricule css="bg-red-400 px-4 rounded-sm text-center  list-none text-white w-50 m-auto font-bold py-4 md:hidden" />
                 <GridCursos />
             </div>
 
-            <video src="../../video/video-promocional.mp4" className="w-full" poster={poster} controls>
+            <video src={`${video}`} className="w-full" poster={poster} controls>
                 Essa tag não está disponível
             </video>
 
